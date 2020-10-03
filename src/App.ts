@@ -32,7 +32,7 @@ export default class TrakteerID {
                     $("[class=\"feed-list\"]").each((i, el) => {
                         result.push(`${$(el).find("[class=\"caption\"]").text().trim()}`)
                     });
-                    const arrayT = result[0].split(author).filter(x => x !== "").map(x => x + "Zen");
+                    const arrayT = result[0].split(author).filter(x => x !== "").map(x => x + author);
                     resolve({
                         feeds: arrayT,
                         author: {
