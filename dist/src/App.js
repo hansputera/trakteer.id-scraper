@@ -26,6 +26,9 @@ class TrakteerID {
                 if ($("h1").text().trim().includes("404")) {
                     reject("Username not found");
                 }
+                else if ($("h1").text().trim().includes("Halaman creator ini tidak aktif")) {
+                    reject("That creater is not active");
+                }
                 else {
                     let result = [];
                     const author = $("[class=\"username\"]").text().trim();
